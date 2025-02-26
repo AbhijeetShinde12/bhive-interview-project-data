@@ -1,0 +1,227 @@
+@import "./assets/styles/mixins.scss";
+@import "./assets/styles/color";
+@import "./components/Header/header.scss";
+@import "./pages/home.scss";
+@import "./components/Sections/sections.scss";
+@import "./components/Footer/footer.scss";
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+
+// Mobile View
+@media screen and (max-width:768px) {
+  .main-container{
+    width: 100%;
+    overflow: hidden;
+
+    .section-wrapper{
+      height: auto;
+      background-color: $standardBgColor;
+      padding: 0;
+      .bgImg{
+        display: none;
+      }
+      .bgMobileImg{
+        display: block;
+        width: 100%;
+      }
+    }
+    .section-wrapper .landing-content h2.heading{
+      font-size: 20px;
+      width: auto;
+      font-weight: 600;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 16px;
+    }
+    .feature-wrapper{
+      padding: 0;
+    }
+    .feature-wrapper h4.heading,
+    .space-container .space-wrapper h2.heading,
+    .footer-container .footer-wrapper h2.heading{
+      font-size: 24px;
+      line-height: 45px;
+      font-family: 700;
+      margin-left: 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 10px;
+        background-image: url("./assets/images/dashArrow.svg"); 
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 8px;
+        position: absolute;
+        bottom: 13px;
+        right: 0;
+      }
+      
+    }
+    .feature-wrapper ul.feature-content{
+      justify-content: space-between;
+    }
+    .feature-wrapper ul.feature-content li{
+     box-shadow: $standardBoxShadow;
+      width: 42%;
+      height: auto;
+      flex-direction: column;
+      border: none;
+      padding: 14px 10px;
+      background: $primaryWhite;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    
+    .feature-wrapper ul.feature-content li span.textDescriptionWrapper .title{
+      font-size: 14px;
+      width: auto;
+      margin-top: 10px;
+    }
+    .space-container .card-container{
+      width: 100%;
+      margin-right: 0;
+    }
+    .space-container .card-container .card-content .heading{
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 600;
+    }
+    .space-container .card-container .passCardWrapper .dayPassCard .subText, 
+    .space-container .card-container .passCardWrapper .blukPassCard .subText{
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .space-container .card-container .passCardWrapper .dayPassCard .priceWrapper, 
+    .space-container .card-container .passCardWrapper .blukPassCard .priceWrapper{
+      font-size: 18px;
+    }
+    .space-container .card-container .passCardWrapper .dayPassCard, 
+    .space-container .card-container .passCardWrapper .blukPassCard{
+      padding: 8px;
+    }
+    .space-container .card-container .passCardWrapper .dayPassCard .arrows img, 
+    .space-container .card-container .passCardWrapper .blukPassCard .arrows img{
+      width: 6px;
+    }
+    .footer-container .description p{
+      display: none;
+    }
+    .footer-container .img-wrapper,
+    .footer-container .description,
+    .footer-container .white-box{
+      width: 100%;
+      position: unset;
+      background-color: transparent;
+      height: auto;
+      box-shadow: none;
+    }
+    .footer-container .img-wrapper{
+      margin: 0;
+      img{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    .footer-container .footer-wrapper .heading{
+      margin-bottom: 20px;
+    }
+    .footer-container .footer-wrapper{
+      height: auto;
+      padding: 12px;
+      background-color: $primaryWhite;
+      border-radius: 6px;
+      margin: 0 20px;
+      box-shadow: $standardBoxShadow;
+      .icons-wrapper{
+        .store-icon{
+          margin-right: 16px;
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+    
+  }
+}
+// Tablet View 
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+  .section-wrapper .landing-content h2.heading{
+    width: 60%;
+    font-size: 40px;
+    top: 100px;
+  }
+  .feature-wrapper{
+    padding: 0;
+  }
+  .feature-content{
+    justify-content: space-between;
+  }
+  .feature-wrapper ul.feature-content li{
+    box-shadow: $standardBoxShadow;
+     width: 30%;
+     height: auto;
+     border: none;
+     padding: 14px 10px;
+     background: $primaryWhite;
+     border-radius: 6px;
+     margin-bottom: 12px;
+     height: 85px;
+   }
+   .feature-wrapper ul.feature-content li span.textDescriptionWrapper .title{
+    width: auto;
+   }
+   .space-container .card-container .card-content .heading{
+    font-size: 16px;
+   }
+   .space-container .card-container{
+    width: 40%;
+   }
+   .space-container .card-container .passCardWrapper .dayPassCard .subText, 
+   .space-container .card-container .passCardWrapper .blukPassCard .subText{
+    font-size: 10px;
+   }
+   .space-container .card-container .passCardWrapper .dayPassCard .priceWrapper, 
+   .space-container .card-container .passCardWrapper .blukPassCard .priceWrapper{
+    font-size: 14px;
+   }
+   .space-container .card-container .passCardWrapper .dayPassCard .arrows img, 
+   .space-container .card-container .passCardWrapper .blukPassCard .arrows img{
+    width: 6px;
+   }
+   .space-container .card-container .passCardWrapper .dayPassCard, 
+   .space-container .card-container .passCardWrapper .blukPassCard{
+    width: 40%;
+   }
+   .footer-wrapper{
+    .img-wrapper{
+      img{
+        width: 60%;
+      }
+    }
+   }
+   .footer-container .footer-wrapper{
+    height: 300px;
+
+   }
+   .footer-container .description p{
+    font-size: 14px;
+    line-height: 18px;
+   }
+   .footer-container .white-box{
+    height: 195px;
+    top: 37%;
+   }
+}

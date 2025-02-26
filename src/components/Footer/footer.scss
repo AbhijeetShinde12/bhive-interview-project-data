@@ -1,0 +1,65 @@
+.footer-container{
+  background-color: $standardBgColor;
+  .footer-wrapper{
+    @include minScreenWidth;
+    padding: 20px;
+    position: relative;
+    height: 480px;
+
+    .heading{
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 30px;
+      margin-left: 40px;
+    }
+  }
+  .img-wrapper{
+    position: absolute;
+    z-index: 9;
+    margin-left: 40px;
+  }
+  .white-box{
+    background: #fff;
+    width: 95%;
+    position: absolute;
+    display: block;
+    height: 245px;
+    top: 45%;
+    z-index: 0;
+    border-radius: 8px;
+    box-shadow:0 0px 8px -1px rgba(0, 0, 0, 0.08)
+
+  }
+  .description{
+    display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 15%;
+        right: 50px;
+
+    p{
+      font-size: 20px;
+      line-height: 28px;
+      color: rgba(96, 95, 95, 1);
+      margin-bottom: 30px;
+    }
+  }
+  .icons-wrapper{
+    .store-icon{
+      margin-right: 30px;
+    }
+  }
+
+  .copyRightText{
+    background-color: rgba(34, 46, 52, 1);
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(221, 221, 221, 1);
+    text-align: center;
+    margin-top: 30px;
+  }
+}

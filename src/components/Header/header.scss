@@ -1,0 +1,24 @@
+
+header{
+  background-color: #fff;
+  box-shadow: 0 -8px 10px 1px #000;
+
+  .header-container{
+    @include minScreenWidth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 20px;
+  
+    .logo{
+      height: 40px;
+    }
+  
+    .phoneImg{
+      border: 1px solid $primaryGoldenYellow;
+      padding: 10px 12px;
+      border-radius: 4px;
+    }
+  }
+}

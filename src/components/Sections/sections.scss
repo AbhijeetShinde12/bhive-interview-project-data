@@ -1,0 +1,250 @@
+.section-wrapper {
+  @include minScreenWidth;
+  background-color: $standardBgColor;
+  //padding: 20px;
+  .bgMobileImg{
+    display: none;
+  }
+  .bgImg {
+   // position: absolute;
+    width: 100%;
+   // left: 0;
+   // top: 0;
+  //  z-index: -1;
+    background-color: $standardBgColor;
+  }
+
+  .landing-content {
+    h2.heading {
+      width: 50%;
+      font-size: 58px;
+      font-weight: 700;
+      margin-top: 60px;
+      position: absolute;
+      top: 140px;
+      padding-left: 20px;
+    }
+    .text-yellow {
+      color: $primaryGoldenYellow;
+    }
+  }
+}
+
+.feature-container {
+  background-color: $standardBgColor;
+  padding: 20px;
+}
+.feature-wrapper {
+  @include minScreenWidth;
+  padding: 20px;
+  h4.heading {
+    font-size: 36px;
+    font-weight: 700;
+  }
+  ul.feature-content {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      height: 80px;
+      width: 22%;
+      padding: 17px;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+
+      &:hover {
+        background-color: $primaryWhite;
+        border-radius: 6px;
+        span.textDescriptionWrapper {
+          .title{
+            transform: translateY(-5px);
+          }
+          .description {
+            opacity: 1;
+            display: block;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      span.textDescriptionWrapper {
+        margin-left: 16px;
+        .title {
+          display: block;
+          font-size: 18px;
+          font-weight: 500;
+          width: 225px;
+          transition: transform 0.3s ease;
+        }
+        .description {
+          font-size: 14px;
+        display: none;
+        transition: opacity 0.5s ease, transform 0.5s ease, display 0.5s;
+        }
+      }
+    }
+  }
+}
+
+
+.space-container{
+  background-color: $standardBgColor;
+  padding: 20px;
+  .space-wrapper{
+    @include minScreenWidth;
+    .heading{
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 45px;
+      margin-bottom: 30px;
+    }
+  }
+  .space-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card-container {
+    width: 29%;
+    margin-bottom: 20px;
+    background-color: $primaryWhite;
+    box-shadow: rgba(0, 0, 0, 0.06);
+    border: 1px solid #EEE7E7CC;
+    border-radius: 8px;
+    padding: 16px;
+    margin-right: 20px;
+    .img{
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .card-content {
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .heading{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      a.link{
+        text-decoration: none;
+      }
+      .subText{
+        width: 52px;
+        height: 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #EEE7E7;
+        border-radius: 7px;
+      
+
+        img{
+          width: 18px;
+          height: 18px;
+          margin-bottom: 10px;
+        }
+
+        span{
+          font-size: 8px;
+          line-height: 9px;
+          font-weight: 500;
+          color: #26323880;
+        }
+      }
+    }
+
+    .img-wrapper{
+      position: relative;
+      .imgWithType{
+        position: absolute;
+        top: 0;
+        margin: 10px;
+        background: linear-gradient(50deg, #263238, #2F4B59);
+        padding: 8px;
+        border-radius: 6px;
+        color: $primaryGoldenYellow;
+        display: flex;
+        align-items: center;
+
+        span{
+          font-size: 14px;
+          letter-spacing: 2px;
+          line-height: 16px;
+          font-weight: 500;
+          margin-left: 10px;
+          text-shadow: 0 1px 3px 0 rgba(255, 208, 79, 0.6);
+        }
+      }
+    }
+
+    .passCardWrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      .dayPassCard, .blukPassCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 12px;
+        height: 50px;
+        width: 42%;
+        border-radius: 6px;
+        background: rgba(238, 231, 231, 1);
+
+        .subText{
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        .priceWrapper{
+          font-size: 20px;
+        }
+        .days{
+          font-size: 12px;
+        }
+
+        .arrows {
+          display: flex;
+          img{
+            width: 10px;
+          }
+        }
+    }
+
+    .blukPassCard{
+      position: relative;
+      background-color: $primaryGoldenYellow;
+      .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 70px;
+        height: 18px;
+        border-radius: 3px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        font-size: 8px;
+        top: -7px;
+         left: 35%;
+
+      }
+    }
+
+    }
+}
+}
